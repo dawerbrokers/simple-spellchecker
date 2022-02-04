@@ -60,7 +60,7 @@ Dictionary.prototype.spellCheck = function(word) {
     // Since the list is sorted, is more fast to do a binary search than 'this.wordlist.indexOf(word)'.
     var res = BinarySearch(
         this.wordlist, // Haystack
-        word.toLowerCase(), // Needle
+        word.toString().toLowerCase(), // Needle
         Collator.compare // Comparison method
     );
     return res >= 0;
